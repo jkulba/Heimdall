@@ -39,4 +39,4 @@ jobs:
           app-name: 'HeimdallFunctionApp'
           slot-name: 'Production'
           package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_51AFB2F1D44B4C0E9121ACB6AAA4F988 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_376E03840C3E43ABA938522065D68406 }}
