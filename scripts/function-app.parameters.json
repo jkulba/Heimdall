@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": {
+      "value": "stheimdall001dev"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "hostingPlanName": {
+        "value": "ASP-HeimdallFunctionApp" 
+    },
+    "applicationInsightsName": {
+        "value": "InsHeimdallFunctionApp"
+    },
+    "appName": {
+        "value": "HeimdallFunctionApp"
+    }
+  }
+}
