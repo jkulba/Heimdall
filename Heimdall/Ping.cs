@@ -23,30 +23,14 @@ namespace Heimdall
 
             _invocationId = executionContext.InvocationId.ToString();
 
-            PingResponse pingResponse = new()
-            {
-                RequestId = _invocationId,
-                Application = "Heimdall Functions",
-                StatusCode = 0,
-                Message = "Heimdall Ping Response",
-                CreatedDate = DateTimeOffset.UtcNow
-            };
-
-            log.LogInformation("Ping request received: {pingResponse}", pingResponse);
-
             await Task.Yield();
 
-            return (ActionResult)new OkObjectResult(pingResponse);
+            return (ActionResult)new OkObjectResult(new
+            {
+                InvocationId = _invocationId,
+                ApplicationName = "Heimdall The Watcher",
+                InvocationDate = DateTimeOffset.UtcNow
+            });
         }
     }
-
-    public record PingResponse
-    {
-        public string RequestId { get; init; }
-        public string Application { get; init; }
-        public int StatusCode { get; init; }
-        public string Message { get; init; }
-        public DateTimeOffset CreatedDate { get; init; }
-    }
-
 }
